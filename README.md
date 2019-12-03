@@ -1,5 +1,7 @@
 # Bubble
 
+[![Build Status](https://travis-ci.com/muguangyi/bubble.svg?branch=master)](https://travis-ci.com/muguangyi/bubble)
+
 **非对称**CI/CD服务。
 
 * 动态分配任务
