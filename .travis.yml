@@ -13,7 +13,7 @@ script:
   - ./codecov.sh
   - make build
   - cd bubble-portal
-  - call npm install
+  - npm install
   - npm run build
 
 after_success:
