@@ -1,7 +1,5 @@
 # Bubble
 
-[![build status](http://gitlab.ztgame.com/tech/Client/Automation/Bubble/badges/master/build.svg)](http://gitlab.ztgame.com/tech/Client/Automation/Bubble/commits/master)
-
 **非对称**CI/CD服务。
 
 * 动态分配任务
