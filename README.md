@@ -1,4 +1,4 @@
-# ![logo.png](bubble-portal/public/icon/logo-32x32.png) Bubble
+# ![logo.png](bubble-portal/public/icon/logo-32x32.png)ubble
 
 [![Build Status](https://travis-ci.com/muguangyi/bubble.svg?branch=master)](https://travis-ci.com/muguangyi/bubble) [![codecov](https://codecov.io/gh/muguangyi/bubble/branch/master/graph/badge.svg)](https://codecov.io/gh/muguangyi/bubble)
 
