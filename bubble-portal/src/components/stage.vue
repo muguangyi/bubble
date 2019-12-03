@@ -97,7 +97,7 @@ export default {
         },
         formatMeasure: function(measure) {
             var h = parseInt(measure / 3600);
-            var measure = measure % 3600;
+            measure = measure % 3600;
             var min = parseInt(measure / 60);
             var sec = measure % 60;
             return (h < 10 ? "0" : "") + h + ":" + (min < 10 ? "0" : "") + min + ":" + (sec < 10 ? "0" : "") + sec;
