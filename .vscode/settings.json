@@ -1,0 +1,22 @@
+{
+    "go.gopath": "D:\\_gopath",
+    "goproject.projects": [
+        {
+            "project_dir":"bubble-master",     //指定一个项目目录 绝对路径或相对打开目录（使用工作区时相对工作区目录）
+            "build_args":"-tags debug -race -gcflags -\"-N -l\"",
+			"build_outdir":"bin/master/",  //指定编译输出目录 绝对路径或相对打开目录（使用工作区时相对工作区目录）
+            "run_args":"",           //运行参数
+            "run_delay":1
+        },
+        {
+            "project_dir":"bubble-worker",     //指定一个项目目录 绝对路径或相对打开目录（使用工作区时相对工作区目录）
+            "build_args":"-tags debug -race -gcflags -\"-N -l\"",
+			"build_outdir":"bin/worker/",  //指定编译输出目录 绝对路径或相对打开目录（使用工作区时相对工作区目录）
+            "run_args":"",           //运行参数
+            "run_delay":0
+        }
+    ],
+    "goproject.gotools": {
+        "types": "-info -use -all"
+    }
+}

@@ -1,0 +1,24 @@
+<seelog minlevel="debug" maxlevel="error">
+	<outputs formatid="main">
+		<filter levels="debug,info,warn,error"> 
+			<console />
+			<buffered size="10000" flushperiod="1000">
+				<rollingfile type="date" filename="tempLogFileName.infolog" datepattern="2006.01.02.15" fullname="true" maxrolls="30"/>  
+			</buffered>
+			<filter levels="warn,error">
+				<buffered size="10000" flushperiod="1000">
+					<rollingfile type="date" filename="tempLogFileName.warnlog" datepattern="2006.01.02.15" fullname="true" maxrolls="30"/>  
+				</buffered>
+				<filter levels="error">
+					<buffered size="10000" flushperiod="1000">
+						<rollingfile type="date" filename="tempLogFileName.errorlog" datepattern="2006.01.02.15" fullname="true" maxrolls="30"/>  
+					</buffered>
+				</filter>
+			</filter>
+		</filter>
+	</outputs>
+	
+	<formats>
+		<format id="main" format="%Date(2006-01-02 15:04:05.999) [%LEV] [%File:%Line] %Msg%n"/>  
+	</formats>	
+</seelog>

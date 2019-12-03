@@ -1,0 +1,4 @@
+web:
+ port: 80
+ root: dist
+ index: index.html
