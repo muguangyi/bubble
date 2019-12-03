@@ -1,6 +1,6 @@
 # Bubble
 
-[![Build Status](https://travis-ci.com/muguangyi/bubble.svg?branch=master)](https://travis-ci.com/muguangyi/bubble)
+[![Build Status](https://travis-ci.com/muguangyi/bubble.svg?branch=master)](https://travis-ci.com/muguangyi/bubble) [![codecov](https://codecov.io/gh/muguangyi/bubble/branch/master/graph/badge.svg)](https://codecov.io/gh/muguangyi/bubble)
 
 **非对称**CI/CD服务。
 
