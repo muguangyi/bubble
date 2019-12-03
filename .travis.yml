@@ -12,6 +12,9 @@ before_script:
 script:
   - ./codecov.sh
   - make build
+  - cd bubble-portal
+  - call npm install
+  - npm run build
 
 after_success:
   - bash <(curl -s https://codecov.io/bash)
