@@ -1,4 +1,4 @@
-# ![logo.png](bubble-portal/public/icon/logo-32x32.png)ubble
+# ![logo.png](https://github.com/muguangyi/bubble/blob/master/bubble-portal/public/icon/logo-32x32.png)ubble
 
 [![Build Status](https://travis-ci.com/muguangyi/bubble.svg?branch=master)](https://travis-ci.com/muguangyi/bubble) [![codecov](https://codecov.io/gh/muguangyi/bubble/branch/master/graph/badge.svg)](https://codecov.io/gh/muguangyi/bubble)
 
@@ -8,7 +8,7 @@
 
 针对上述情况，需要将传统的`Job`进行更为细的粒度拆分，并分散到不同的物理机器上。也就是说传统的将一个完整`Job`交给一个目标物理机全部完成的方式不能满足现在的需求，需要将`Job`可以拆分的步骤分散到满足步骤的不同环境中执行。
 
-![bubble.png](bubble.png)
+![bubble.png](https://github.com/muguangyi/bubble/blob/master/bubble.png)
 
 ## 消除命令的物理机依赖
 
