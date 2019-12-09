@@ -2,13 +2,29 @@
 
 [![Build Status](https://travis-ci.com/muguangyi/bubble.svg?branch=master)](https://travis-ci.com/muguangyi/bubble) [![codecov](https://codecov.io/gh/muguangyi/bubble/branch/master/graph/badge.svg)](https://codecov.io/gh/muguangyi/bubble)
 
+> An asymmetric CI/CD service.
+
+## Background
+
+![bubble.png](https://github.com/muguangyi/bubble/blob/master/bubble.png)
+
+## Install
+
+## Quick Start
+
+## Maintainer
+
+## Contributing
+
+## License
+
+MIT © MuGuangyi
+
 **非对称**CI/CD服务。
 
 主流的`CI/CD`解决方案都是有一个预设前提，所有的版本机器环境一致，这样任务才可以动态分配。只是在现实使用中，尤其是游戏项目，其构建版本的需求往往不一致。例如，`iOS`版本只能在`Mac`机器上构建，`Android`版本在`Windows`上构建可能性价比更高，`.NET`项目可能目前只能在`Windows`机器上编译，等等。因此很多时候，构建版本所依赖的硬件，操作系统，编译环境都很难做到一致。
 
 针对上述情况，需要将传统的`Job`进行更为细的粒度拆分，并分散到不同的物理机器上。也就是说传统的将一个完整`Job`交给一个目标物理机全部完成的方式不能满足现在的需求，需要将`Job`可以拆分的步骤分散到满足步骤的不同环境中执行。
-
-![bubble.png](https://github.com/muguangyi/bubble/blob/master/bubble.png)
 
 ## 消除命令的物理机依赖
 
