@@ -39,7 +39,7 @@ There are two type nodes: `Master` and `Worker`.
 ### Run master
 
 * Navigate to master folder.
-* Run master
+* Run master.
   
   **Windows**:
 
@@ -56,7 +56,7 @@ There are two type nodes: `Master` and `Worker`.
 ### Run worker
 
 * Navigate to worker folder.
-* Run worker
+* Run worker.
   
   **Windows**:
 
@@ -79,7 +79,7 @@ Visit localhost in browser and show the following result. Congrats! Bubble is re
 ### First Job
 
 * Input a job name, like Test.
-* Press `CREATE`
+* Press `CREATE`.
 
 ![first-job](doc/first-job.png)
 

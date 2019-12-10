@@ -1,122 +1,110 @@
-# ![logo.png](bubble-portal/public/icon/logo-32x32.png)ubble
+# Bubble
 
 [![Build Status](https://travis-ci.com/muguangyi/bubble.svg?branch=master)](https://travis-ci.com/muguangyi/bubble) [![codecov](https://codecov.io/gh/muguangyi/bubble/branch/master/graph/badge.svg)](https://codecov.io/gh/muguangyi/bubble)
 
-**非对称**CI/CD服务。
+> 非对称持续集成框架。
 
-主流的`CI/CD`解决方案都是有一个预设前提，所有的版本机器环境一致，这样任务才可以动态分配。只是在现实使用中，尤其是游戏项目，其构建版本的需求往往不一致。例如，`iOS`版本只能在`Mac`机器上构建，`Android`版本在`Windows`上构建可能性价比更高，`.NET`项目可能目前只能在`Windows`机器上编译，等等。因此很多时候，构建版本所依赖的硬件，操作系统，编译环境都很难做到一致。
+## 背景
 
-针对上述情况，需要将传统的`Job`进行更为细的粒度拆分，并分散到不同的物理机器上。也就是说传统的将一个完整`Job`交给一个目标物理机全部完成的方式不能满足现在的需求，需要将`Job`可以拆分的步骤分散到满足步骤的不同环境中执行。
+如果让任何CI机器都能够执行任何类型的任务，则有一个预设前提：所有的机器必须具备同样的系统环境，像安装的软件，等等。但是对于小的团队或者公司很难为不同的CI需求维护很多机器。以`Unity`作为例子，`Unity`每年都会发布很多个版本，而不同的团队可能使用不同的版本。那么每一台CI机器都要安装所有可能用到的版本，因此建立一个CI的集群就会比较困难。另外一个选择就是一台机器只处理固定有限的任务，但是缺点就是物理资源不能被充分使用，并且缺少灵活性。
 
-![bubble.png](bubble.png)
+Bubble希望建立一个更为灵活的解决方案。Bubble能将一个任务分解为多个步骤，并在不同的机器上执行。同时，每一个物理机可以有不同的环境，而Bubble可以搜集每一个机器能执行什么样的工作，从而决定哪里执行目标步骤。
 
-## 消除命令的物理机依赖
+![bubble](doc/bubble.png)
 
-有些命令在执行时会存在**理论上**的物理机依赖，例如编译需要针对本地的目录，因此更新代码就需要将代码下载到同一台物理机上。
+### 功能
 
-**Bubble**为了去掉命令对物理机的依赖设计了`流磁盘`（`Stream Disk`），这样可以在命令之间传递磁盘数据，从而不再对数据的位置产生依赖。例如下载和编译可以分布在不同的物理机上，而在编译前，**Bubble**会将下载命令的目标文件传递到编译命令所在的物理机，从而让编译可以顺利进行。
+* 任务可分解。
+* 动态分配任务步骤。
+* 工作节点具有自述性。
+* 内建很多命令：shell，zip，ftp，unity，email notification，等等。
+* 支持变量和方法。
+* 任务追踪，例如执行时间。
+* 工作节点追踪。
 
-Bubble具有以下主要特点：
+## 安装
 
-* Job可拆分，粒度更小
-* 动态分配任务
-* 节点具有自我描述性（管理中心了解节点能做什么）
-* `shell`命令执行
-* 打包（`compress`）
-* 上传（`ftp`）
-* unity编译
-* 消息通知（邮件通知）
-* 数据收集（执行时间等）
-* 监控节点
+* 下载目标二进制[版本](https://github.com/muguangyi/bubble/releases).
+* 解压到本地目录。
 
-## 编译
+## 快速开始
 
-### 依赖
+Bubble有两种节点类型：`Master`和`Worker`.
 
-|环境|描述|
+|概念|描述|
 |--:|:--|
-|`Go`| >= v1.12.0 |
-|`Node.js`| >= v10.14.1 |
-|`Redis`| >= v5.0 |
+|`Master`|主节点可以解析和分解任务，并拆分为步骤，以及分发到工作节点。|
+|`Worker`|工作节点可以处理各种命令执行，以及向master同步结果。|
 
-### 服务编译及发布
+### 运行master
 
-#### Windows
+* 进入master目录。
+* 运行master。
+  
+  **Windows**:
 
-```shell
-> publish.bat
-```
+  ```shell
+  > bubble-master.exe
+  ```
 
-#### Linux
+  **MacOS**/**Linux**:
 
-```shell
-> publish.sh
-```
+  ```shell
+  > ./bubble-master
+  ```
 
-#### MacOS
+### 运行worker
 
-```shell
-> publish.sh
-```
+* 进入worker目录。
+* 运行worker。
+  
+  **Windows**:
 
-会生成三个平台的服务器版本
+  ```shell
+  > bubble-worker.exe
+  ```
 
-```text
-pub
- |-- linux/
- |     |-- master/
- |     |     |-- dist/
- |     |     |     |-- css/
- |     |     |     |-- icon/
- |     |     |     |-- js/
- |     |     |     |-- index.html
- |     |     |-- bubble-master
- |     |     |-- log.xml
- |     |     |-- master.toml
- |     |     |-- master.yml
- |     |-- worker/
- |     |     |-- bubble-worker
- |     |     |-- log.xml
- |     |     |-- worker.toml
- |     |     |-- worker.yml
- |
- |-- mac/
- |     |-- master/
- |     |     |-- dist/
- |     |     |     |-- css/
- |     |     |     |-- icon/
- |     |     |     |-- js/
- |     |     |     |-- index.html
- |     |     |-- bubble-master
- |     |     |-- log.xml
- |     |     |-- master.toml
- |     |     |-- master.yml
- |     |-- worker/
- |     |     |-- bubble-worker
- |     |     |-- log.xml
- |     |     |-- worker.toml
- |     |     |-- worker.yml
- |
- |-- windows/
- |     |-- master/
- |     |     |-- dist/
- |     |     |     |-- css/
- |     |     |     |-- icon/
- |     |     |     |-- js/
- |     |     |     |-- index.html
- |     |     |-- bubble-master.exe
- |     |     |-- log.xml
- |     |     |-- master.toml
- |     |     |-- master.yml
- |     |-- worker/
- |     |     |-- bubble-worker.exe
- |     |     |-- log.xml
- |     |     |-- worker.toml
- |     |     |-- worker.yml
-```
+  **MacOS**/**Linux**:
 
-> 根据物理机的系统以及要部署的模块复制相应平台版本即可。
+  ```shell
+  > ./bubble-worker
+  ```
+
+### 访问Master主页
+
+浏览器中访问localhost，如果显示以下结果，那么恭喜，Bubble已经可以工作了。
+
+![result](doc/result.png)
+
+### 第一个任务
+
+* 输入一个任务名，例如Test。
+* 点击`CREATE`。
+
+![first-job](doc/first-job.png)
+
+### 执行Job
+
+* 点击`Setting`可以查看Bubble脚本。
+  
+  ```yml
+  # .bubble.yml
+  -
+   action: shell
+   script:
+   - echo Hello Bubble!
+  ```
+
+* 点击`Trigger`可以触发执行当前任务。
 
 ## 文档
 
-详情参见[Wiki](https://github.com/muguangyi/bubble/wiki)。
+详细信息请查看[Wiki](https://github.com/muguangyi/bubble/wiki).
+
+## 维护者
+
+[@MuGuangyi](https://github.com/muguangyi)
+
+## 许可证
+
+[MIT](LICENSE) © MuGuangyi
