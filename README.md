@@ -60,6 +60,27 @@ Visit localhost in browser and show the following result. Congrats! Bubble is re
 
 ![result.png](doc/result.png)
 
+### First Job
+
+* Input a job name, like Test.
+* Press `CREATE`
+
+![first-job.pn](doc/first-job.png)
+
+### Run Job
+
+* Press `Setting` to check the Bubble script.
+  
+  ```yml
+  # .bubble.yml
+  -
+   action: shell
+   script:
+   - echo Hello Bubble!
+  ```
+
+* Press `Trigger` to execute the job.
+
 ## Documentation
 
 Detail information please refer to [Wiki](https://github.com/muguangyi/bubble/wiki).
