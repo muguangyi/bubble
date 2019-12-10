@@ -10,7 +10,7 @@ If any CI machine could run any type of job, there is a precondition: All machin
 
 Bubble wants to setup more flexable solution. It could split a job to separated steps and execute them on different machine. Also every machine could have different environment, and Bubble could collect the ability of every different machine and decide where to execute.
 
-![bubble.png](doc/bubble.png)
+![bubble](doc/bubble.png)
 
 ### Features
 
@@ -58,14 +58,14 @@ There are two type nodes: `Master` and `Worker`.
 
 Visit localhost in browser and show the following result. Congrats! Bubble is ready.
 
-![result.png](doc/result.png)
+![result](doc/result.png)
 
 ### First Job
 
 * Input a job name, like Test.
 * Press `CREATE`
 
-![first-job.pn](doc/first-job.png)
+![first-job](doc/first-job.png)
 
 ### Run Job
 
