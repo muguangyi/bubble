@@ -36,6 +36,10 @@ Bubble有两种节点类型：`Master`和`Worker`.
 |`Master`|主节点可以解析和分解任务，并拆分为步骤，以及分发到工作节点。|
 |`Worker`|工作节点可以处理各种命令执行，以及向master同步结果。|
 
+### 前置条件
+
+* 首先本地启动[Redis](https://redis.io)。
+
 ### 运行master
 
 * 进入master目录。

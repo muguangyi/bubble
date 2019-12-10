@@ -36,6 +36,10 @@ There are two type nodes: `Master` and `Worker`.
 |`Master`|The master node could parse and separate job to steps (Action), and distribute to working node.|
 |`Worker`|The real working node that could handle action execution and sync the result to master.|
 
+### Precondition
+
+* Start [Redis](https://redis.io) local firstly.
+
 ### Run master
 
 * Navigate to master folder.
