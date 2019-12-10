@@ -1,4 +1,4 @@
-# ![logo.png](https://github.com/muguangyi/bubble/blob/master/bubble-portal/public/icon/logo-32x32.png)ubble
+# Bubble
 
 [![Build Status](https://travis-ci.com/muguangyi/bubble.svg?branch=master)](https://travis-ci.com/muguangyi/bubble) [![codecov](https://codecov.io/gh/muguangyi/bubble/branch/master/graph/badge.svg)](https://codecov.io/gh/muguangyi/bubble)
 
@@ -10,7 +10,7 @@ If any CI machine could run any type of job, there is a precondition: All machin
 
 Bubble wants to setup more flexable solution. It could split a job to separated steps and execute them on different machine. Also every machine could have different environment, and Bubble could collect the ability of every different machine and decide where to execute.
 
-![bubble.png](https://github.com/muguangyi/bubble/blob/master/bubble.png)
+![bubble.png](bubble.png)
 
 ### Features
 
