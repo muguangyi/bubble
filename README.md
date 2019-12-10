@@ -87,8 +87,8 @@ Detail information please refer to [Wiki](https://github.com/muguangyi/bubble/wi
 
 ## Maintainer
 
-## Contributing
+[@MuGuangyi](https://github.com/muguangyi)
 
 ## License
 
-MIT © MuGuangyi
+[MIT](LICENSE) © MuGuangyi
