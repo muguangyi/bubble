@@ -41,17 +41,33 @@ There are two type nodes: `Master` and `Worker`.
 * Navigate to master folder.
 * Run master
   
+  **Windows**:
+
   ```shell
   > bubble-master.exe
+  ```
+
+  **MacOS**/**Linux**:
+
+  ```shell
+  > ./bubble-master
   ```
 
 ### Run worker
 
 * Navigate to worker folder.
 * Run worker
+  
+  **Windows**:
 
   ```shell
   > bubble-worker.exe
+  ```
+
+  **MacOS**/**Linux**:
+
+  ```shell
+  > ./bubble-worker
   ```
 
 ### Visit in Browser
