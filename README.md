@@ -40,7 +40,7 @@ There are two type nodes: `Master` and `Worker`.
 
 * Start [Redis](https://redis.io) local firstly.
 
-### Run master
+### ① Run master
 
 * Navigate to master folder.
 * Run master.
@@ -57,7 +57,7 @@ There are two type nodes: `Master` and `Worker`.
   > ./bubble-master
   ```
 
-### Run worker
+### ② Run worker
 
 * Navigate to worker folder.
 * Run worker.
@@ -74,20 +74,20 @@ There are two type nodes: `Master` and `Worker`.
   > ./bubble-worker
   ```
 
-### Visit in Browser
+### ③ Visit in Browser
 
 Visit localhost in browser and show the following result. Congrats! Bubble is ready.
 
 ![result](doc/result.png)
 
-### First Job
+### ④ First Job
 
 * Input a job name, like Test.
 * Press `CREATE`.
 
 ![first-job](doc/first-job.png)
 
-### Run Job
+### ⑤ Run Job
 
 * Press `Setting` to check the Bubble script.
   

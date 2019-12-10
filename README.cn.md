@@ -40,7 +40,7 @@ Bubble有两种节点类型：`Master`和`Worker`.
 
 * 首先本地启动[Redis](https://redis.io)。
 
-### 运行master
+### ① 运行master
 
 * 进入master目录。
 * 运行master。
@@ -57,7 +57,7 @@ Bubble有两种节点类型：`Master`和`Worker`.
   > ./bubble-master
   ```
 
-### 运行worker
+### ② 运行worker
 
 * 进入worker目录。
 * 运行worker。
@@ -74,20 +74,20 @@ Bubble有两种节点类型：`Master`和`Worker`.
   > ./bubble-worker
   ```
 
-### 访问Master主页
+### ③ 访问Master主页
 
 浏览器中访问localhost，如果显示以下结果，那么恭喜，Bubble已经可以工作了。
 
 ![result](doc/result.png)
 
-### 第一个任务
+### ④ 第一个任务
 
 * 输入一个任务名，例如Test。
 * 点击`CREATE`。
 
 ![first-job](doc/first-job.png)
 
-### 执行Job
+### ⑤ 执行Job
 
 * 点击`Setting`可以查看Bubble脚本。
   
