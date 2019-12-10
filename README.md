@@ -10,7 +10,7 @@ If any CI machine could run any type of job, there is a precondition: All machin
 
 Bubble wants to setup more flexable solution. It could split a job to separated steps and execute them on different machine. Also every machine could have different environment, and Bubble could collect the ability of every different machine and decide where to execute.
 
-![bubble.png](bubble.png)
+![bubble.png](doc/bubble.png)
 
 ### Features
 
@@ -36,13 +36,33 @@ There are two type nodes: `Master` and `Worker`.
 |`Master`|The master node could parse and separate job to steps (Action), and distribute to working node.|
 |`Worker`|The real working node that could handle action execution and sync the result to master.|
 
-### Setup `Worker`
+### Run master
 
-### Setup `Master`
+* Navigate to master folder.
+* Run master
+  
+  ```shell
+  > bubble-master.exe
+  ```
+
+### Run worker
+
+* Navigate to worker folder.
+* Run worker
+
+  ```shell
+  > bubble-worker.exe
+  ```
+
+### Visit in Browser
+
+Visit localhost in browser and show the following result. Congrats! Bubble is ready.
+
+![result.png](doc/result.png)
 
 ## Documentation
 
-Please refer to [Wiki](https://github.com/muguangyi/bubble/wiki).
+Detail information please refer to [Wiki](https://github.com/muguangyi/bubble/wiki).
 
 ## Maintainer
 
