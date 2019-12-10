@@ -1,39 +1,26 @@
 [Config]
-# Redis健康检查定时器，单位秒
 RedisHealthCheckTimer = 2
-# 开启心跳
 HeartBeat = false
-#超过该时间未收到数据，认为网络断开
 HBTimer = 10 
-# 心跳包发送间隔
 HBTicker = 4
-# 开发调试模式(服务器panic错误会发往客户端)
 Debug = 1
 
 [Log]
-# 日志文件存放的文件夹
 LogDir = "./log/"
-# 日志文件名为空则用可执行文件名
 LogFileName = ""
-# 日志配置文件
 LogConfig = "./log.xml"
 
-
-#底层App用到的配置
 [ServerApp]
 ListenAddr = "127.0.0.1:17011"
 OuterIP = "127.0.0.1"
 SvrMaxConn = 10000
 IsEncrypt = false
-#加载的服务
 Services = "Worker"
-
 
 [Worker]
 SvrListenAddr = "127.0.0.1:18001"
 OuterIP="127.0.0.1"
 VerifyMsgID = 0
-# TickInterval 单位毫秒
 TickInterval = 1000 
 
 [DB]
