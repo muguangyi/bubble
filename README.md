@@ -6,9 +6,9 @@
 
 ## Background
 
-If any CI machine could run any type of job, there is a precondition: All machines must have the same environment, like softwares, etc. But for small team/company, it's hard to maintain so many machines with different CI requirement. Use `Unity` engine as an example, it will publish many versions per year, and different teams may use different version of Unity. Trying to setup CI cluster is really hard since every machine should install all possible versions of Unity. Another option is one machine only handle limited jobs to reduce the dependency of the environment, but the disadvantage is the physics resources can't be used fully and less flexable.
+If any CI machine could run any type of job, there is a precondition: All machines must have the same environment, like softwares, etc. But for small team/company, it's hard to maintain so many machines with different CI requirement. Use `Unity` engine as an example, it will ship many versions every year, and different teams may use different version of Unity. Trying to setup CI cluster is really hard since every machine should install all possible versions of Unity. Another option is one machine only handle limited jobs to reduce the dependency of the environment, but the disadvantage is the physics resources can't be used fully and less flexable.
 
-Bubble wants to setup more flexable solution. It could split a job to separated steps and execute them on different machine. Also every machine could have different environment, and Bubble could collect the ability of every different machine and decide where to execute.
+Bubble wants to setup more flexible solution. It could split a job to separated steps and execute them on different machine. Also every machine could have different environment, and Bubble could collect the ability of every different machine and decide where to execute.
 
 ![bubble](doc/bubble.png)
 
